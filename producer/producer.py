@@ -13,8 +13,8 @@ producer = KafkaProducer (
     value_serializer = lambda v: json.dumps(v).encode("utf-8") 
 )
 
-def fecth_quote(symbol):
-    url = f"{BASE_URL}?symbol ={symbol}&token={API_KEY}"
+def fetch_quote(symbol):
+    url = f"{BASE_URL}?symbol={symbol}&token={API_KEY}"
     try:
         response = requests.get(url)
         response.raise_for_status()
