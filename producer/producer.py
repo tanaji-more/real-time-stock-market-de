@@ -1,15 +1,15 @@
 import time
 import json
 import requests
-from kafka import kafkaProducer
+from kafka import KafkaProducer
 
 
 API_KEY = "d6703vpr01qmckkbjgb0d6703vpr01qmckkbjgbg"
 BASE_URL = "https://finnhub.io/api/v1/quote"
 SYMBOLS = ["APPL", "MSFT", "TSLA", "GOOGL", "AMZN"]
 
-producer = kafkaProducer (
-    bootstrap_servers = ["host.docker.internal:29092"]
+producer = KafkaProducer (
+    bootstrap_servers = ["host.docker.internal:29092"],
     value_serializer = lambda v: json.dumps(v).encode("utf-8") 
 )
 
