@@ -3,15 +3,19 @@ import json
 import requests
 from kafka import KafkaProducer
 
+#Define variables for API
 
 API_KEY = "d6703vpr01qmckkbjgb0d6703vpr01qmckkbjgbg"
 BASE_URL = "https://finnhub.io/api/v1/quote"
-SYMBOLS = ["APPL", "MSFT", "TSLA", "GOOGL", "AMZN"]
+SYMBOLS = ["AAPL", "MSFT", "TSLA", "GOOGL", "AMZN"]
 
 producer = KafkaProducer (
     bootstrap_servers = ["host.docker.internal:29092"],
     value_serializer = lambda v: json.dumps(v).encode("utf-8") 
 )
+
+
+#Retrive Data
 
 def fetch_quote(symbol):
     url = f"{BASE_URL}?symbol={symbol}&token={API_KEY}"
@@ -31,4 +35,4 @@ while True:
         if quote:
             print(f"Producing : {quote}")
             producer.send("stock-quotes", value = quote)
-        time.sleep(6)
+    time.sleep(6)
