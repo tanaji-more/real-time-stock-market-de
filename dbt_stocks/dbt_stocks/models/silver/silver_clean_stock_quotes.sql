@@ -9,5 +9,6 @@ SELECT
     ROUND(change_percent, 4) AS change_percent,
     market_timestamp,
     fetched_at
+    
 FROM {{ ref('bronze_stg_stock_quotes') }}
 WHERE current_price IS NOT NULL
