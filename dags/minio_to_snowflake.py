@@ -5,7 +5,8 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 
-MINIO_ENDPOINT = "http://minio:9000"
+MINIO_ENDPOINT = "http://minio:9000",
+
 MINIO_ACCESS_KEY = "admin"
 MINIO_SECRET_KEY = 'password123'
 BUCKET = "bronze-transactions"
