@@ -2,4 +2,3 @@ venv/
 logs/
 dags/__pycache__
 .env
-dags/minio_to_snowflake.py
