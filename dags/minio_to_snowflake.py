@@ -4,19 +4,27 @@ import snowflake.connector
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
 
-MINIO_ENDPOINT = "http://minio:9000"
-MINIO_ACCESS_KEY = "admin"
-MINIO_SECRET_KEY = 'password123'
-BUCKET = "bronze-transactions"
-LOCAL_DIR = "/tmp/minio_downloads"
+#root path
+env_path = Path(__file__).resolve().parent.parent / ".env"
 
-SNOWFLAKE_USER = "tanajimore"
-SNOWFLAKE_PASSWORD = "Snowflake@1122"
-SNOWFLAKE_ACCOUNT = "ws92694.ap-southeast-1"
-SNOWFLAKE_WAREHOUSE = "COMPUTE_WH"
-SNOWFLAKE_DB = "STOCKS_MDS"
-SNOWFLAKE_SCHEMA = "COMMON"
+# load .env file
+load_dotenv(dotenv_path=env_path)
+# load_dotenv("../.env")
+
+MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT")
+MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
+MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY")
+BUCKET = os.getenv("BUCKET")
+LOCAL_DIR = os.getenv("LOCAL_DIR")
+
+SNOWFLAKE_USER = os.getenv("SNOWFLAKE_USER")
+SNOWFLAKE_PASSWORD = os.getenv("SNOWFLAKE_PASSWORD")
+SNOWFLAKE_ACCOUNT =  os.getenv("SNOWFLAKE_ACCOUNT")
+SNOWFLAKE_WAREHOUSE = os.getenv("SNOWFLAKE_WAREHOUSE")
+SNOWFLAKE_DB = os.getenv("SNOWFLAKE_DB")
+SNOWFLAKE_SCHEMA = os.getenv("SNOWFLAKE_SCHEMA")
 
 def download_from_minio():
     os.makedirs(LOCAL_DIR, exist_ok = True)
