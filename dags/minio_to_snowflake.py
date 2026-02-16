@@ -11,7 +11,6 @@ env_path = Path(__file__).resolve().parent.parent / ".env"
 
 # load .env file
 load_dotenv(dotenv_path=env_path)
-# load_dotenv("../.env")
 
 MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT")
 MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
