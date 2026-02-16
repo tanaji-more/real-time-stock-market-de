@@ -26,6 +26,7 @@ SNOWFLAKE_DB = os.getenv("SNOWFLAKE_DB")
 SNOWFLAKE_SCHEMA = os.getenv("SNOWFLAKE_SCHEMA")
 
 def download_from_minio():
+    
     os.makedirs(LOCAL_DIR, exist_ok = True)
     s3 = boto3.client(
         "s3",
