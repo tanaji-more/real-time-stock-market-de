@@ -5,7 +5,7 @@ SELECT
     change_percent
 FROM (
     SELECT *,
-           row_number() over (partition by symbol order by fetched_at desc) as rn
+           row_number() OVER (PARTITION BY symbol ORDER BY fetched_at DESC) AS rn
     FROM {{ ref('silver_clean_stock_quotes') }}
 ) t
 WHERE rn = 1
