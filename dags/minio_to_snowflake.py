@@ -1,5 +1,6 @@
 import os
 import boto3
+from pathlib import Path
 import snowflake.connector
 from airflow import DAG
 from airflow.operators.python import PythonOperator
@@ -7,7 +8,9 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv
 
 #root path
-env_path = Path(__file__).resolve().parent.parent / ".env"
+# env_path = Path(__file__).resolve().parent.parent / ".env"
+env_path = Path("/opt/airflow/dags/.env")
+
 
 # load .env file
 load_dotenv(dotenv_path=env_path)
@@ -16,7 +19,9 @@ MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT")
 MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
 MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY")
 BUCKET = os.getenv("BUCKET")
-LOCAL_DIR = os.getenv("LOCAL_DIR")
+#LOCAL_DIR = os.getenv("LOCAL_DIR")
+LOCAL_DIR = os.getenv("LOCAL_DIR", "/opt/airflow/data")
+
 
 SNOWFLAKE_USER = os.getenv("SNOWFLAKE_USER")
 SNOWFLAKE_PASSWORD = os.getenv("SNOWFLAKE_PASSWORD")
