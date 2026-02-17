@@ -10,6 +10,7 @@ WITH source AS (
 
 latest_day AS (
   -- if market_timestamp is epoch seconds (NUMBER/INT):
+  
   SELECT CAST(TO_TIMESTAMP_LTZ(MAX(market_timestamp)) AS DATE) AS max_day
   FROM source
 ),
