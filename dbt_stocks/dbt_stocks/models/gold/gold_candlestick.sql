@@ -40,7 +40,6 @@ ranked as (
         ) as rn
     from candles c
 )
-
 select
     symbol,
     candle_time,
