@@ -3,7 +3,7 @@ import boto3
 from pathlib import Path
 import snowflake.connector
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+from airflow.operators.python import PythonOperator # type: ignore
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 
