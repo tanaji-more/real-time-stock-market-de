@@ -17,7 +17,6 @@ with enriched as (
     from {{ ref('silver_clean_stock_quotes') }}
 ),
 
-
 candles as (
     select
         symbol,
