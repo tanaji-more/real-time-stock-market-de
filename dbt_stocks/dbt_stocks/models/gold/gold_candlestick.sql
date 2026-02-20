@@ -20,7 +20,6 @@ candles as (
     select
         symbol,
         trade_date as candle_time,
-        
         min(day_low) as candle_low,
         max(day_high) as candle_high,
         any_value(candle_open) as candle_open,
