@@ -9,3 +9,5 @@ FROM (
     FROM {{ ref('silver_clean_stock_quotes') }}
 ) t
 WHERE rn = 1
+
+
