@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 
 #root path
 # env_path = Path(__file__).resolve().parent.parent / ".env"
-
 env_path = Path("/opt/airflow/dags/.env")
 
 
