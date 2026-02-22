@@ -14,7 +14,6 @@ latest_day AS (
   FROM source
 ),
 
-
 latest_prices AS (
   SELECT
     symbol,
