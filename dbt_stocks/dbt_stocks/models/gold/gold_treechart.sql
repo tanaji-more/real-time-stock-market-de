@@ -13,6 +13,8 @@ latest_day AS (
   SELECT CAST(TO_TIMESTAMP_LTZ(MAX(market_timestamp)) AS DATE) AS max_day
   FROM source
 ),
+
+
 latest_prices AS (
   SELECT
     symbol,
