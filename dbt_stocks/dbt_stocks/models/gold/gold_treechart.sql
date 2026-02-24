@@ -21,6 +21,7 @@ latest_prices AS (
   JOIN latest_day ld
     ON CAST(TO_TIMESTAMP_LTZ(market_timestamp) AS DATE) = ld.max_day
   GROUP BY symbol
+  
 ),
 
 all_time_volatility AS (
