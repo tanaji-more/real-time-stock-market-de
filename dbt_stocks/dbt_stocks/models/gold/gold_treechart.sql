@@ -23,6 +23,7 @@ latest_prices AS (
   GROUP BY symbol
 ),
 
+
 all_time_volatility AS (
   SELECT
     symbol,
