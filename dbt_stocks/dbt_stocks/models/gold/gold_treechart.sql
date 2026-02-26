@@ -22,7 +22,6 @@ latest_prices AS (
     ON CAST(TO_TIMESTAMP_LTZ(market_timestamp) AS DATE) = ld.max_day
   GROUP BY symbol
 ),
-
 all_time_volatility AS (
   SELECT
     symbol,
