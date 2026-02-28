@@ -15,7 +15,7 @@ with enriched as (
             rows between unbounded preceding and unbounded following
         ) as candle_close
     from {{ ref('silver_clean_stock_quotes') }}
-),=3    1
+),=3    
 candles as (
     select
         symbol,
