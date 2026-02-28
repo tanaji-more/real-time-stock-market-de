@@ -15,7 +15,8 @@ with enriched as (
             rows between unbounded preceding and unbounded following
         ) as candle_close
     from {{ ref('silver_clean_stock_quotes') }}
-),=3    
+),
+
 candles as (
     select
         symbol,
@@ -28,6 +29,7 @@ candles as (
     from enriched
     group by symbol, trade_date
 ),
+
 ranked as (
     select
         c.*,
