@@ -34,7 +34,6 @@ all_time_volatility AS (
   GROUP BY symbol
 )
 SELECT
-
   lp.symbol,
   lp.avg_price,
   v.volatility,
