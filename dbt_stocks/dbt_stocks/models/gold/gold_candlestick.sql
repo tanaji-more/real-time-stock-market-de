@@ -17,7 +17,6 @@ with enriched as (
     from {{ ref('silver_clean_stock_quotes') }}
 ),
 candles as (
-    
     select
         symbol,
         trade_date as candle_time, 
@@ -29,6 +28,7 @@ candles as (
     from enriched
     group by symbol, trade_date
 ),
+
 ranked as (
     select
         c.*,
