@@ -33,6 +33,7 @@ all_time_volatility AS (
   FROM source
   GROUP BY symbol
 )
+
 SELECT
   lp.symbol,
   lp.avg_price,
