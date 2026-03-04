@@ -28,7 +28,6 @@ candles as (
     from enriched
     group by symbol, trade_date
 ),
-
 ranked as (
     select
         c.*,
