@@ -20,6 +20,7 @@ producer = KafkaProducer (
 #Retrive Data
 
 def fetch_quote(symbol):
+    
     url = f"{BASE_URL}?symbol={symbol}&token={API_KEY}"
     try:
         response = requests.get(url)
