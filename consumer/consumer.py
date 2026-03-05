@@ -42,7 +42,6 @@ for message in consumer:
     record = message.value
     symbol = record.get("symbol")
     ts = record.get("fetched_at", int(time.time()))
-    
     key = f"{symbol}/{ts}.json"
 
     s3.put_object(
