@@ -35,7 +35,6 @@ all_time_volatility AS (
 )
 SELECT
   lp.symbol,
-  
   lp.avg_price,
   v.volatility,
   v.relative_volatility
