@@ -31,7 +31,6 @@ candles as (
 ranked as (
     select
         c.*,
-        
         row_number() over (
             partition by symbol
             order by candle_time desc
