@@ -16,7 +16,6 @@ producer = KafkaProducer (
     bootstrap_servers=["localhost:29092"],
     value_serializer=lambda v: json.dumps(v).encode("utf-8")  # convert dict into json file
 )
-
 #Retrive Data
 
 def fetch_quote(symbol):
