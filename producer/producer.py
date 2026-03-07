@@ -33,7 +33,6 @@ def fetch_quote(symbol):
         return None
 
 #Looping and Pushing to Stream
-
 while True:
     for symbol in SYMBOLS:
         quote = fetch_quote(symbol)
