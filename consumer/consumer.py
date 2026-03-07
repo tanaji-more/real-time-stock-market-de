@@ -35,6 +35,7 @@ consumer = KafkaConsumer(
     value_deserializer = lambda v: json.loads(v.decode("utf-8"))  # convert json into py dict
 )
 print("Consumer streaming and saving to MinIo...")
+
 # Main function to save the record
 for message in consumer:
     record = message.value
