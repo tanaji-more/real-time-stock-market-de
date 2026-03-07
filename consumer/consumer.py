@@ -47,4 +47,5 @@ for message in consumer:
         Body=json.dumps(record),
         ContentType = "application/json"
     )
-    print(f"Saved record for {symbol} = s3://{bucket_name}/{key}")
+    print(f"Saved record for {symbol} = s3://{bucket_name}/{key}")  
+    
