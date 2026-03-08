@@ -31,7 +31,6 @@ def fetch_quote(symbol):
         print(f"Error fetching {symbol}: {e}")
         return None
 
-
 #Looping and Pushing to Stream
 while True:
     for symbol in SYMBOLS:
