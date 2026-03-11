@@ -37,6 +37,7 @@ consumer = KafkaConsumer(
 print("Consumer streaming and saving to MinIo...")
 
 
+
 # Main function to save the record
 for message in consumer:
     record = message.value
