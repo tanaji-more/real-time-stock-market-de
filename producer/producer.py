@@ -10,6 +10,7 @@ API_KEY="d6703vpr01qmckkbjgb0d6703vpr01qmckkbjgbg"
 BASE_URL = "https://finnhub.io/api/v1/quote"
 SYMBOLS = ["AAPL", "MSFT", "TSLA", "GOOGL", "AMZN"]
 
+
 #Initial Producer
 producer = KafkaProducer (
     #bootstrap_servers=["host.docker.internal:29092"],
