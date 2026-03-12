@@ -12,7 +12,6 @@ from dotenv import load_dotenv
 # env_path = Path(__file__).resolve().parent.parent / ".env"
 env_path = Path("/opt/airflow/dags/.env")
 
-
 # load .env file
 load_dotenv(dotenv_path=env_path)
 MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT")
