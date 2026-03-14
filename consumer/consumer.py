@@ -6,7 +6,6 @@ import time
 from kafka import KafkaConsumer
 
 #minio connection 
-
 s3 = boto3.client(
     "s3",
     endpoint_url="http://localhost:9002",
