@@ -37,6 +37,7 @@ def download_from_minio():
         aws_secret_access_key = MINIO_SECRET_KEY
     )
 
+
     objects = s3.list_objects_v2(Bucket = BUCKET).get("Contents", [])
     local_files = []
     for obj in objects:
