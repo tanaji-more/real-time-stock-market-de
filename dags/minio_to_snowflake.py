@@ -21,7 +21,6 @@ BUCKET = os.getenv("BUCKET")
 #LOCAL_DIR = os.getenv("LOCAL_DIR")
 LOCAL_DIR = os.getenv("LOCAL_DIR", "/opt/airflow/data")
 
-
 SNOWFLAKE_USER = os.getenv("SNOWFLAKE_USER")
 SNOWFLAKE_PASSWORD = os.getenv("SNOWFLAKE_PASSWORD")
 SNOWFLAKE_ACCOUNT =  os.getenv("SNOWFLAKE_ACCOUNT")
