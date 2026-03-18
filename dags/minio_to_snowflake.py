@@ -47,7 +47,6 @@ def download_from_minio():
         local_files.append(local_file)
     return local_files
 
-
 def load_to_snowflake(**kwargs):
     local_files = kwargs['ti'].xcom_pull(task_ids = 'download_minio')
     if not local_files:
