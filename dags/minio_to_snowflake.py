@@ -86,7 +86,6 @@ default_args = {
     "retries" : 1,
     "retry_delay" : timedelta(minutes=5)
 }
-
 with DAG(
     "minio_to_snowflake",
     default_args = default_args,
