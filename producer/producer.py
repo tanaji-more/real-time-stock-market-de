@@ -5,6 +5,7 @@ import json
 import requests
 from kafka import KafkaProducer
 
+
 #Define variables for API
 API_KEY="d6703vpr01qmckkbjgb0d6703vpr01qmckkbjgbg"
 BASE_URL = "https://finnhub.io/api/v1/quote"
