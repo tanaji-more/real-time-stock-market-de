@@ -11,3 +11,4 @@ SELECT
     v:fetched_at::timestamp AS fetched_at
     
 FROM {{source('raw', 'bronze_stock_quotes_raw')}}
+
