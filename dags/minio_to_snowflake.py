@@ -102,5 +102,4 @@ with DAG(
         python_callable = load_to_snowflake,
         provide_context = True
     )
-
     task1 >> task2
