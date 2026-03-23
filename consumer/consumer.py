@@ -14,7 +14,6 @@ s3 = boto3.client(
 )
 
 bucket_name = "bronze-transactions"
-
 try:
     s3.head_bucket(Bucket=bucket_name)
     print(f"Bucket {bucket_name} already exists. ")
