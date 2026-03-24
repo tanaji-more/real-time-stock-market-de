@@ -12,7 +12,6 @@ s3 = boto3.client(
     aws_access_key_id="admin",
     aws_secret_access_key="password123"
 )
-
 bucket_name = "bronze-transactions"
 try:
     s3.head_bucket(Bucket=bucket_name)
