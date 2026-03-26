@@ -5,6 +5,7 @@ import boto3
 import time
 from kafka import KafkaConsumer
 
+
 #minio connection 
 s3 = boto3.client(
     "s3",
