@@ -30,6 +30,7 @@ We capture **live stock market data** from an external API, stream it in real ti
 
 ---
 
+
 ## ✅ Key Features
 - Fetching **live stock market data** (not simulated) from an API  
 - Real-time streaming pipeline with **Kafka**  
