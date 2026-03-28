@@ -40,6 +40,7 @@ We capture **live stock market data** from an external API, stream it in real ti
 
 ---
 
+
 ## 📂 Repository Structure
 
 ```text
