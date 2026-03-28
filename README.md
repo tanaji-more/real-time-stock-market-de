@@ -84,7 +84,6 @@ real-time-stocks-pipeline/
 - Defined producers (API fetch) and consumers (pipeline ingestion).
 
 ---
-
 ### **2. Live Market Data Producer**
 - Developed **Python producer script** `stock_producer.py` to fetch **real-time stock prices** from the **Finnhub API** using an API key.
 - Streams stock data into Kafka in JSON format.
