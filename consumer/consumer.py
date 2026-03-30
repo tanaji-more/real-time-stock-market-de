@@ -4,8 +4,6 @@ import json
 import boto3
 import time
 from kafka import KafkaConsumer
-
-
 #minio connection 
 s3 = boto3.client(
     "s3",
@@ -22,7 +20,6 @@ except Exception:
     print(f"Created bucket {bucket_name}. ")
 
 # define consumer
-
 
 consumer = KafkaConsumer(
     "stock-quotes",
