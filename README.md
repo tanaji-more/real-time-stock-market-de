@@ -10,6 +10,7 @@
 
 ---
 
+
 ## 📌 Project Overview
 This project demonstrates an **end-to-end real-time data pipeline** using the **Modern Data Stack**.  
 We capture **live stock market data** from an external API, stream it in real time, orchestrate transformations, and deliver analytics-ready insights — all in one unified project.
