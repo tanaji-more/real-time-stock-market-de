@@ -16,7 +16,6 @@ We capture **live stock market data** from an external API, stream it in real ti
 
 ![Architecture (1)](https://github.com/user-attachments/assets/6b49eb4d-4bf7-473d-9281-50c20b241760)
 
-
 ---
 
 ## ⚡ Tech Stack
