@@ -21,6 +21,7 @@ except Exception:
 
 # define consumer
 
+
 consumer = KafkaConsumer(
     "stock-quotes",
     # bootstarp_servers= ["host.docker.internal:29092"],
