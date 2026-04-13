@@ -20,6 +20,11 @@ except Exception:
     print(f"Created bucket {bucket_name}. ")
 
 # define consumer
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> eab67d5 (updated code)
 consumer = KafkaConsumer(
     "stock-quotes",
     # bootstarp_servers= ["host.docker.internal:29092"],
